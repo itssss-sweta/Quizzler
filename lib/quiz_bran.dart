@@ -47,8 +47,19 @@ class QuizBrain {
     return _questionBank[_questionNumber].questionAnswer;
   }
 
-  // void isFinished() {
-  //   if(_questionNumber < _questionBank.length - 1) {
+  bool isFinished() {
+    //same code
+    // if (_questionNumber >= _questionBank.length - 1) {
+    //   // print('returning truu');
+    //   return true;
+    // } else {
+    //   return false;
+    // }
 
-  // }
+    return _questionNumber >= _questionBank.length - 1;
+  }
+
+  void reset() {
+    _questionNumber = 0;
+  }
 }
